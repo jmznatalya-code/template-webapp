@@ -6,10 +6,9 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
-  administration: write
 
 jobs:
   deploy:
@@ -35,4 +34,5 @@ jobs:
         with:
           path: '.'
       - id: deployment
+        uses: actions/deploy-pages@v4      - id: deployment
         uses: actions/deploy-pages@v4
