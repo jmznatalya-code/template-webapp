@@ -1,5 +1,9 @@
 const CACHE = 'app-v1';
-const ASSETS = ['/', '/index.html', '/app.js', '/style.css'];
+const ASSETS = [
+  '/template-webapp/',
+  '/template-webapp/index.html',
+  '/template-webapp/manifest.json'
+];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
